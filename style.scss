@@ -1,0 +1,87 @@
+@use "./partials/palette";
+@use "./partials/devices";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Pacifico&family=Permanent+Marker&display=swap");
+
+body {
+    background-color: palette.$background-colour;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: palette.$title-colour;
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+}
+
+label {
+    color: palette.$palest-colour;
+    font-size: 20px;
+}
+
+button {
+    background-color: palette.$button-colour;
+    color: palette.$button-text-colour;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 10px;
+    font-size: 15px;
+    &:hover {
+        background-color: palette.$button-colour-hover;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: palette.$button-colour-click;
+    }
+}
+
+.translator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    font-family: "Noto Sans Display", sans-serif;
+    &__box {
+        &--input {
+            font-size: 20px;
+            margin-top: 10px;
+            height: 4em;
+            width: 30em;
+        }
+        &--outputbox {
+            font-size: 20px;
+            width: 30em;
+            height: 4em;
+            margin-top: 10px;
+            background-color: white;
+        }
+    }
+}
+
+.whiteboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.personals {
+    display: flex;
+    justify-content: center;
+    font-family: "Pacifico";
+    &__github {
+        color: palette.$subtitle-colour;
+    }
+}
+
+a {
+    color: palette.$para-colour;
+    text-decoration: none;
+    &:visited {
+        color: palette.$subtitle-colour;
+    }
+    &:hover {
+        color: palette.$para-colour;
+    }
+}

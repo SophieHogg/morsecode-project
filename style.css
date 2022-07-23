@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Pacifico&family=Permanent+Marker&display=swap");
+body {
+  background-color: #5a8a6c;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #d1d249;
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+}
+
+label {
+  color: #e7e7a0;
+  font-size: 20px;
+}
+
+button {
+  background-color: #3c513f;
+  color: #a29e34;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 0;
+  margin-top: 10px;
+  font-size: 15px;
+}
+button:hover {
+  background-color: #2a4032;
+  cursor: pointer;
+}
+button:active {
+  background-color: #1c2b21;
+}
+
+.translator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  font-family: "Noto Sans Display", sans-serif;
+}
+.translator__box--input {
+  font-size: 20px;
+  margin-top: 10px;
+  height: 4em;
+  width: 30em;
+}
+.translator__box--outputbox {
+  font-size: 20px;
+  width: 30em;
+  height: 4em;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.whiteboxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.personals {
+  display: flex;
+  justify-content: center;
+  font-family: "Pacifico";
+}
+.personals__github {
+  color: #bdb83c;
+}
+
+a {
+  color: #dce5dd;
+  text-decoration: none;
+}
+a:visited {
+  color: #bdb83c;
+}
+a:hover {
+  color: #dce5dd;
+}

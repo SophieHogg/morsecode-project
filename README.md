@@ -8,6 +8,13 @@ The colour palette, as with the remainder of my portfolio, utilises colours from
 
 ##### Structure
 
-The structure of the translator is a combination between https://morsedecoder.com/ and https://www.boxentriq.com/code-breaking/morse-code. I decided to have two separate parts of the site for Morse Code to Latin and Latin to Morse Code.
+The structure of the translator is a combination between https://morsedecoder.com/ and https://morsecode.world/international/translator.html.
 
-The page is effectively divided in two, with the left hand side being used for Morse Code to Latin translation and the right hand side being used for Latin to Morse Code translation.
+The page is effectively divided in two, with the left hand side being used for input and the right hand side being used for output.
+
+TO DO:
+ensure characters can be written with - OR \_.
+ensure spaces can be written with | or /
+fix issues with characters and when each function occurs
+add some extra characters
+search for characters in string and see if any of them have no key value pair assigned.

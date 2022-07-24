@@ -67,16 +67,13 @@ button:active {
   font-family: "Pacifico";
 }
 .personals__github {
-  color: #bdb83c;
+  width: 64px;
+  height: 64px;
+  background-image: url("./images/GitHub-Mark-64px.png");
 }
-
-a {
-  color: #dce5dd;
-  text-decoration: none;
+.personals__github:hover {
+  background-image: url("./images/git-yellow.png");
 }
-a:visited {
-  color: #bdb83c;
-}
-a:hover {
-  color: #dce5dd;
+.personals__github:active {
+  background-image: url("./images/git-orange.png");
 }

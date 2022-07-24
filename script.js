@@ -30,6 +30,16 @@ const secretCode = {
     x: "-..-",
     y: "-.--",
     z: "--..",
+    0: "-----",
+    1: ".----",
+    2: "..---",
+    3: "...--",
+    4: "....-",
+    5: ".....",
+    6: "-....",
+    7: "--...",
+    8: "---..",
+    9: "----.",
     " ": "/",
     "!": "-.-.--",
     "?": "..--..",
@@ -52,7 +62,8 @@ const reverseCode = Object.entries(secretCode).reduce((acc, [key, value]) => {
 let englishToMorseString = "";
 let englishArray = [];
 function englishToMorse(text) {
-    englishArray = text.split("");
+    let lowercaseText = text.toLowerCase();
+    englishArray = lowercaseText.split("");
     englishArray.forEach(
         (letter) => (englishToMorseString += " " + secretCode[letter])
     );
@@ -67,6 +78,7 @@ let morseToEnglishString = "";
 let morseArray = [];
 
 function morseToEnglish(text) {
+    text;
     morseArray = text.split(" ");
     morseArray.forEach(
         (letter) => (morseToEnglishString += reverseCode[letter])
@@ -79,13 +91,18 @@ function morseToEnglish(text) {
 }
 
 translateButton.addEventListener("click", () => {
-    if (/[a-zA-Z!?,.]/.test(input.value)) {
+    let inputValue = input.value;
+    if (inputValue.includes("undefined")) {
+        output.innerHTML = "Sorry, You have entered unsupported characters.";
+    } else if (/[a-zA-Z!?,0-9]/.test(input.value)) {
         englishToMorseString = "";
+
         output.innerHTML = englishToMorse(input.value);
-    } else if (/[\.\-\_\/\|]/.test(input.value)) {
+    } else if (/[\.\-\/]/.test(input.value)) {
+        inputValue = inputValue.replace(" _", " -");
         morseToEnglishString = "";
         output.innerHTML = morseToEnglish(input.value);
     } else {
-        output.innerHTML = "Sorry, this character is unsupported.";
+        output.innerHTML = "Sorry, these characters are unsupported.";
     }
 });

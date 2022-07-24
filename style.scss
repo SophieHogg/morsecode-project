@@ -71,17 +71,14 @@ button {
     justify-content: center;
     font-family: "Pacifico";
     &__github {
-        color: palette.$subtitle-colour;
-    }
-}
-
-a {
-    color: palette.$para-colour;
-    text-decoration: none;
-    &:visited {
-        color: palette.$subtitle-colour;
-    }
-    &:hover {
-        color: palette.$para-colour;
+        width: 64px;
+        height: 64px;
+        background-image: url("./images/GitHub-Mark-64px.png");
+        &:hover {
+            background-image: (url("./images/git-yellow.png"));
+        }
+        &:active {
+            background-image: (url("./images/git-orange.png"));
+        }
     }
 }

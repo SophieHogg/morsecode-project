@@ -28,6 +28,7 @@ button {
     border: 0;
     margin-top: 10px;
     font-size: 15px;
+    margin-left: 5vw;
     &:hover {
         background-color: palette.$button-colour-hover;
         cursor: pointer;
@@ -40,23 +41,24 @@ button {
 .translator {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
     font-family: "Noto Sans Display", sans-serif;
-    &__box {
-        &--input {
-            font-size: 20px;
-            margin-top: 10px;
-            height: 4em;
-            width: 30em;
-        }
-        &--outputbox {
-            font-size: 20px;
-            width: 30em;
-            height: 4em;
-            margin-top: 10px;
-            background-color: white;
-        }
+}
+
+.boxes {
+    font-size: 20px;
+    width: 25em;
+    height: 4.33em;
+    margin-top: 10px;
+    background-color: white;
+    margin: 10px;
+    @include devices.phone-s {
+        font-size: 8px;
+    }
+    @include devices.phone {
+        font-size: 12px;
+    }
+    @include devices.tablet {
+        font-size: 15px;
     }
 }
 
@@ -64,21 +66,55 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    @include devices.phone-s {
+        flex-direction: column;
+        align-items: center;
+    }
+    @include devices.phone {
+        flex-direction: column;
+        align-items: center;
+    }
+    @include devices.tablet {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .personals {
     display: flex;
+    width: 100%;
     justify-content: center;
     font-family: "Pacifico";
+    margin-top: 20px;
+    &__logo {
+        width: 32px;
+        height: 32px;
+        margin: 0px 20px 0px 20px;
+    }
     &__github {
-        width: 64px;
-        height: 64px;
-        background-image: url("./images/GitHub-Mark-64px.png");
+        background-image: url("./images/github-black-32.png");
         &:hover {
-            background-image: (url("./images/git-yellow.png"));
+            background-image: (url("./images/github-yellow-32.png"));
         }
         &:active {
-            background-image: (url("./images/git-orange.png"));
+            background-image: (url("./images/github-orange-32.png"));
         }
     }
+    &__linkedin {
+        background-image: url("./images/linkedin-black-32.png");
+        &:hover {
+            background-image: (url("./images/linkedin-yellow-32.png"));
+        }
+        &:active {
+            background-image: (url("./images/linkedin-orange-32.png"));
+        }
+    }
+}
+
+#errorbox--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

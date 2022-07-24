@@ -25,6 +25,7 @@ button {
   border: 0;
   margin-top: 10px;
   font-size: 15px;
+  margin-left: 5vw;
 }
 button:hover {
   background-color: #2a4032;
@@ -37,22 +38,31 @@ button:active {
 .translator {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
   font-family: "Noto Sans Display", sans-serif;
 }
-.translator__box--input {
+
+.boxes {
   font-size: 20px;
-  margin-top: 10px;
-  height: 4em;
-  width: 30em;
-}
-.translator__box--outputbox {
-  font-size: 20px;
-  width: 30em;
-  height: 4em;
+  width: 25em;
+  height: 4.33em;
   margin-top: 10px;
   background-color: white;
+  margin: 10px;
+}
+@media only screen and (max-width: 320px) {
+  .boxes {
+    font-size: 8px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .boxes {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .boxes {
+    font-size: 15px;
+  }
 }
 
 .whiteboxes {
@@ -60,20 +70,59 @@ button:active {
   flex-direction: row;
   justify-content: space-around;
 }
+@media only screen and (max-width: 320px) {
+  .whiteboxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .whiteboxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .whiteboxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .personals {
   display: flex;
+  width: 100%;
   justify-content: center;
   font-family: "Pacifico";
+  margin-top: 20px;
+}
+.personals__logo {
+  width: 32px;
+  height: 32px;
+  margin: 0px 20px 0px 20px;
 }
 .personals__github {
-  width: 64px;
-  height: 64px;
-  background-image: url("./images/GitHub-Mark-64px.png");
+  background-image: url("./images/github-black-32.png");
 }
 .personals__github:hover {
-  background-image: url("./images/git-yellow.png");
+  background-image: url("./images/github-yellow-32.png");
 }
 .personals__github:active {
-  background-image: url("./images/git-orange.png");
+  background-image: url("./images/github-orange-32.png");
+}
+.personals__linkedin {
+  background-image: url("./images/linkedin-black-32.png");
+}
+.personals__linkedin:hover {
+  background-image: url("./images/linkedin-yellow-32.png");
+}
+.personals__linkedin:active {
+  background-image: url("./images/linkedin-orange-32.png");
+}
+
+#errorbox--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

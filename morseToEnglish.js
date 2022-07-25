@@ -7,10 +7,9 @@ function morseToEnglish(text) {
     morseArray.forEach((element) => {
         if (Object.values(secretCode).includes(element)) {
             morseToEnglishString += reverseCode[element];
-        } else {
-            return "ERROR";
         }
     });
+    morseToEnglishString = morseToEnglishString.trim();
     return morseToEnglishString;
 }
 

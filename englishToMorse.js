@@ -8,7 +8,7 @@ function englishToMorse(text) {
             englishToMorseString += " " + secretCode[lowercaseText.charAt(i)];
         }
     }
-    return englishToMorseString;
+    return englishToMorseString.trim();
 }
 
 export default englishToMorse;

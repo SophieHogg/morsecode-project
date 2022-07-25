@@ -1,10 +1,10 @@
 # Morse Code Project
 
-### This project is a two-way translator between Latin letters and Morse code.
+### This project is a two-way translator between Latin characters and Morse code.
 
 ## Colour Palette
 
-The colour palette, as with the remainder of my portfolio, utilises colours from Australian flora. Therefore, I decided to use a wattle colour palette with a lot of bright yellows, pale greys and dark, forest greens. This is based on a combination of colour palettes, including this one: https://icolorpalette.com/download/palette/526587_color_palette.jpg
+The colour palette, as with the remainder of my portfolio, utilises colours from Australian flora. Therefore, I decided to use a wattle colour palette with a lot of bright yellows, pale greys and dark, forest greens, based on this: https://icolorpalette.com/download/palette/526587_color_palette.jpg
 
 ## Structure
 
@@ -18,7 +18,7 @@ If the page is too narrow, the boxes will instead be on top of one another to en
 
 There are two pure functions used, morseToEnglish() and englishToMorse().
 
-morseToEnglish() turns morse code into Latin letters and englishToMorse() turns Latin letters into morse code. Both functions ignore undefined characters.
+morseToEnglish() turns morse code into Latin characters and englishToMorse() turns Latin characters into morse code. Both functions ignore undefined characters.
 
 These are both tested using their own test suites with 6 tests each. They were constructed using TDD, where the tests were written before the functions were completed.
 

@@ -1,0 +1,25 @@
+{
+    "name": "morsecode-project",
+    "version": "1.0.0",
+    "description": "### This project is a two-way translator between Latin letters and Morse code.",
+    "main": "englishToMorse.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SophieHogg/morsecode-project.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SophieHogg/morsecode-project/issues"
+    },
+    "homepage": "https://github.com/SophieHogg/morsecode-project#readme",
+    "devDependencies": {
+        "@babel/core": "^7.18.9",
+        "@babel/preset-env": "^7.18.9",
+        "babel-jest": "^28.1.3",
+        "jest": "^28.1.3"
+    }
+}

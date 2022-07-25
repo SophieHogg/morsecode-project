@@ -25,7 +25,6 @@ button {
   border: 0;
   margin-top: 10px;
   font-size: 15px;
-  margin-left: 5vw;
 }
 button:hover {
   background-color: #2a4032;
@@ -45,7 +44,6 @@ button:active {
   font-size: 20px;
   width: 25em;
   height: 4.33em;
-  margin-top: 10px;
   background-color: white;
   margin: 10px;
 }

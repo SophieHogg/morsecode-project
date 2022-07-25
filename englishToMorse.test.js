@@ -32,7 +32,7 @@ describe("testing a function that turns English into morse code", () => {
             ".... --- .-- / .- .-. . / -.-- --- ..- ..--.."
         );
     });
-    it("Should work ignore undefined symbols", () => {
+    it("Should ignore undefined symbols", () => {
         expect(englishToMorse("Hi%")).toBe(".... ..");
         expect(englishToMorse("#%$@ ouch!")).toBe("/ --- ..- -.-. .... -.-.--");
     });

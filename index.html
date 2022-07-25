@@ -14,26 +14,37 @@
         <div class="translator">
             <div class="translator__box">
                 <br />
-                <div id="errorbox--container">
-                    <div id="errorbox"></div>
+                <div class="centred-text" id="errorbox--container">
+                    <div id="errorbox">
+                        <span>Please enter some characters below</span>
+                    </div>
                 </div>
                 <div class="whiteboxes">
                     <textarea
                         class="boxes translator__box--input"
                         id="input"
+                        placeholder="Input"
                     ></textarea>
-                    <div
-                        class="boxes translator__box--outputbox"
-                        id="output"
-                    ></div>
-                </div>
-                <div id="button--container">
-                    <button id="translateButton">Translate</button>
+                    <textarea 
+                        id="output" class="boxes translator__box--outputbox"
+                        placeholder="Output"
+                        readonly>
+                    </textarea>
+                    </div>
                 </div>
             </div>
             <!--End .translator__toMorse div-->
         </div>
         <!--End .translators div-->
+        <div class="plug centred-text">
+            <p>
+                Please ensure morse code convention is followed: with a space
+                between each desired letter.
+            </p>
+            <p>
+                Thanks for checking this out! See my GitHub and LinkedIn below.
+            </p>
+        </div>
         <div class="personals">
             <a href="https://github.com/SophieHogg/SophieH">
                 <div class="personals__logo personals__github"></div>

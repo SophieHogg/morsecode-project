@@ -1,15 +1,16 @@
 import reverseCode from "./reverseCode.js";
-import secretCode from "./secretCode.js";
 
 function morseToEnglish(text) {
     let morseToEnglishString = "";
+    text = text.replace(/_/g, "-");
+    text = text.replace(/\|/g, "/");
+    text = text.replace(/\/\//g, "/ /");
     let morseArray = text.split(" ");
     morseArray.forEach((element) => {
-        if (Object.values(secretCode).includes(element)) {
+        if (Object.keys(reverseCode).includes(element)) {
             morseToEnglishString += reverseCode[element];
         }
     });
-    morseToEnglishString = morseToEnglishString.trim();
     return morseToEnglishString;
 }
 

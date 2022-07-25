@@ -5,6 +5,7 @@
 body {
     background-color: palette.$background-colour;
     height: 100%;
+    font-family: "Noto Sans Display", sans-serif;
 }
 
 h1 {
@@ -13,42 +14,29 @@ h1 {
     font-family: "Permanent Marker", sans-serif;
     font-size: 40px;
     font-style: normal;
-}
-
-label {
-    color: palette.$palest-colour;
-    font-size: 20px;
-}
-
-button {
-    background-color: palette.$button-colour;
-    color: palette.$button-text-colour;
-    padding: 10px 25px;
-    border-radius: 10px;
-    border: 0;
-    margin-top: 10px;
-    font-size: 15px;
-    &:hover {
-        background-color: palette.$button-colour-hover;
-        cursor: pointer;
+    @include devices.phone-s {
+        font-size: 25px;
     }
-    &:active {
-        background-color: palette.$button-colour-click;
+    @include devices.phone {
+        font-size: 30px;
+    }
+    @include devices.desktop {
+        font-size: 45px;
     }
 }
 
 .translator {
     display: flex;
     flex-direction: column;
-    font-family: "Noto Sans Display", sans-serif;
 }
 
 .boxes {
     font-size: 20px;
     width: 25em;
     height: 4.33em;
-    background-color: white;
+    background-color: palette.$palest-colour;
     margin: 10px;
+    border: none;
     @include devices.phone-s {
         font-size: 8px;
     }
@@ -58,6 +46,9 @@ button {
     @include devices.tablet {
         font-size: 15px;
     }
+    @include devices.desktop {
+        font-size: 25px;
+    }
 }
 
 .whiteboxes {
@@ -65,15 +56,7 @@ button {
     flex-direction: row;
     justify-content: space-around;
 
-    @include devices.phone-s {
-        flex-direction: column;
-        align-items: center;
-    }
-    @include devices.phone {
-        flex-direction: column;
-        align-items: center;
-    }
-    @include devices.tablet {
+    @include devices.small-width {
         flex-direction: column;
         align-items: center;
     }
@@ -84,22 +67,39 @@ button {
     width: 100%;
     justify-content: center;
     font-family: "Pacifico";
-    margin-top: 20px;
+    margin-top: 10px;
+    @include devices.large-width {
+        margin-top: 20px;
+    }
     &__logo {
         width: 32px;
         height: 32px;
-        margin: 0px 20px 0px 20px;
+        @include devices.large-width {
+            width: 64px;
+            height: 64px;
+        }
     }
     &__github {
         background-image: url("./images/github-black-32.png");
+        margin-right: 10px;
         &:hover {
             background-image: (url("./images/github-yellow-32.png"));
         }
         &:active {
             background-image: (url("./images/github-orange-32.png"));
         }
+        @include devices.large-width {
+            background-image: url("./images/github-black-64.png");
+            &:hover {
+                background-image: (url("./images/github-yellow-64.png"));
+            }
+            &:active {
+                background-image: (url("./images/github-orange-64.png"));
+            }
+        }
     }
     &__linkedin {
+        margin-left: 10px;
         background-image: url("./images/linkedin-black-32.png");
         &:hover {
             background-image: (url("./images/linkedin-yellow-32.png"));
@@ -107,19 +107,40 @@ button {
         &:active {
             background-image: (url("./images/linkedin-orange-32.png"));
         }
+        @include devices.large-width {
+            background-image: url("./images/linkedin-black-64.png");
+            &:hover {
+                background-image: (url("./images/linkedin-yellow-64.png"));
+            }
+            &:active {
+                background-image: (url("./images/linkedin-orange-64.png"));
+            }
+        }
     }
 }
 
-#errorbox--container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+a {
+    width: 32px;
+    height: 32px;
+    @include devices.large-width {
+        width: 64px;
+        height: 64px;
+    }
 }
-
-#button--container {
+.centred-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    @include devices.phone-s {
+        font-size: 12px;
+    }
+    @include devices.phone-s {
+        font-size: 13px;
+    }
+    @include devices.desktop {
+        font-size: 18px;
+    }
 }

@@ -2,6 +2,7 @@
 body {
   background-color: #5a8a6c;
   height: 100%;
+  font-family: "Noto Sans Display", sans-serif;
 }
 
 h1 {
@@ -11,41 +12,34 @@ h1 {
   font-size: 40px;
   font-style: normal;
 }
-
-label {
-  color: #e7e7a0;
-  font-size: 20px;
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 25px;
+  }
 }
-
-button {
-  background-color: #3c513f;
-  color: #a29e34;
-  padding: 10px 25px;
-  border-radius: 10px;
-  border: 0;
-  margin-top: 10px;
-  font-size: 15px;
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
 }
-button:hover {
-  background-color: #2a4032;
-  cursor: pointer;
-}
-button:active {
-  background-color: #1c2b21;
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 45px;
+  }
 }
 
 .translator {
   display: flex;
   flex-direction: column;
-  font-family: "Noto Sans Display", sans-serif;
 }
 
 .boxes {
   font-size: 20px;
   width: 25em;
   height: 4.33em;
-  background-color: white;
+  background-color: #e7e7a0;
   margin: 10px;
+  border: none;
 }
 @media only screen and (max-width: 320px) {
   .boxes {
@@ -62,25 +56,18 @@ button:active {
     font-size: 15px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .boxes {
+    font-size: 25px;
+  }
+}
 
 .whiteboxes {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-@media only screen and (max-width: 320px) {
-  .whiteboxes {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .whiteboxes {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .whiteboxes {
     flex-direction: column;
     align-items: center;
@@ -92,15 +79,26 @@ button:active {
   width: 100%;
   justify-content: center;
   font-family: "Pacifico";
-  margin-top: 20px;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .personals {
+    margin-top: 20px;
+  }
 }
 .personals__logo {
   width: 32px;
   height: 32px;
-  margin: 0px 20px 0px 20px;
+}
+@media only screen and (min-width: 768px) {
+  .personals__logo {
+    width: 64px;
+    height: 64px;
+  }
 }
 .personals__github {
   background-image: url("./images/github-black-32.png");
+  margin-right: 10px;
 }
 .personals__github:hover {
   background-image: url("./images/github-yellow-32.png");
@@ -108,7 +106,19 @@ button:active {
 .personals__github:active {
   background-image: url("./images/github-orange-32.png");
 }
+@media only screen and (min-width: 768px) {
+  .personals__github {
+    background-image: url("./images/github-black-64.png");
+  }
+  .personals__github:hover {
+    background-image: url("./images/github-yellow-64.png");
+  }
+  .personals__github:active {
+    background-image: url("./images/github-orange-64.png");
+  }
+}
 .personals__linkedin {
+  margin-left: 10px;
   background-image: url("./images/linkedin-black-32.png");
 }
 .personals__linkedin:hover {
@@ -117,17 +127,49 @@ button:active {
 .personals__linkedin:active {
   background-image: url("./images/linkedin-orange-32.png");
 }
-
-#errorbox--container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@media only screen and (min-width: 768px) {
+  .personals__linkedin {
+    background-image: url("./images/linkedin-black-64.png");
+  }
+  .personals__linkedin:hover {
+    background-image: url("./images/linkedin-yellow-64.png");
+  }
+  .personals__linkedin:active {
+    background-image: url("./images/linkedin-orange-64.png");
+  }
 }
 
-#button--container {
+a {
+  width: 32px;
+  height: 32px;
+}
+@media only screen and (min-width: 768px) {
+  a {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.centred-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  font-size: 15px;
+}
+@media only screen and (max-width: 320px) {
+  .centred-text {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .centred-text {
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .centred-text {
+    font-size: 18px;
+  }
 }

@@ -31,4 +31,10 @@ describe("Testing a function that turns morse code into English letters", () => 
             "hi & bye"
         );
     });
+    it("Should work with alternate morse spellings i.e. with | or _ instead of / and -", () => {
+        expect(morseToEnglish("-._.-_")).toBe("!");
+        expect(morseToEnglish("_... ._. ___ .__ _.")).toBe("brown");
+        expect(morseToEnglish(" .... .. | .- .-.. ._..")).toBe("hi all");
+        expect(morseToEnglish(".. | .. | ..")).toBe("i i i");
+    });
 });

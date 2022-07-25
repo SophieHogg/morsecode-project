@@ -46,6 +46,7 @@ const secretCode = {
     ")": "-.--.-",
     "'": ".----.",
     "/\n/": "/\n/",
+    "-": "-....-",
 };
 
 export default secretCode;

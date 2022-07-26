@@ -1,17 +1,12 @@
-import reverseCode from "./reverseCode.js";
-
-function morseToEnglish(text) {
-    let morseToEnglishString = "";
+function morseToEnglish(text, secretCode) {
     text = text.replace(/_/g, "-");
     text = text.replace(/\|/g, "/");
     text = text.replace(/\/\//g, "/ /");
-    let morseArray = text.split(" ");
-    morseArray.forEach((element) => {
-        if (Object.keys(reverseCode).includes(element)) {
-            morseToEnglishString += reverseCode[element];
-        }
-    });
-    return morseToEnglishString;
+    return text
+        .split(" ")
+        .map((char) => secretCode[char])
+        .filter((char) => char)
+        .join("");
 }
 
 export default morseToEnglish;

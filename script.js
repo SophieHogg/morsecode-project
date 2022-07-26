@@ -1,5 +1,7 @@
 import englishToMorse from "./englishToMorse.js";
 import morseToEnglish from "./morseToEnglish.js";
+import reverseCode from "./reverseCode.js";
+import secretCode from "./secretCode.js";
 
 const translateButton = document.getElementById("translateButton");
 const input = document.getElementById("input");
@@ -14,19 +16,19 @@ input.addEventListener("input", () => {
     output.value = "";
     if (!inputValue) {
         errorbox.innerHTML = "Please enter some characters.";
-    } else if (/[a-zA-Z!?,0-9()'"&]/.test(input.value)) {
-        output.value = englishToMorse(inputValue);
+    } else if (/[a-zA-Z!?,0-9()'"&]/.test(inputValue)) {
+        output.value = englishToMorse(inputValue, secretCode);
         if (
             inputValue.split("").length >
-            englishToMorse(inputValue).split(" ").length
+            englishToMorse(inputValue, secretCode).split(" ").length
         ) {
             errorbox.innerHTML = ignoredLetters;
         }
-    } else if (/[|\_\.\-\/]/.test(input.value)) {
-        output.value = morseToEnglish(input.value);
+    } else if (/[|\_\.\-\/]/.test(inputValue)) {
+        output.value = morseToEnglish(inputValue, reverseCode);
         if (
             inputValue.trim().split(" ").length >
-            morseToEnglish(inputValue).length
+            morseToEnglish(inputValue, reverseCode).length
         ) {
             errorbox.innerHTML = ignoredLetters;
         }

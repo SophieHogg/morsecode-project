@@ -2,6 +2,8 @@
 
 ### This project is a two-way translator between Latin characters and Morse code.
 
+![alt text](./images/MorseCodeInterface.PNG)
+
 ## Colour Palette
 
 The colour palette, as with the remainder of my portfolio, utilises colours from Australian flora. Therefore, I decided to use a wattle colour palette with a lot of bright yellows, pale greys and dark, forest greens, based on this: https://icolorpalette.com/download/palette/526587_color_palette.jpg
